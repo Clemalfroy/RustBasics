@@ -1,5 +1,5 @@
 [package]
-name = "vecInt"
+name = "vec_int"
 version = "0.1.0"
 authors = ["cmalfroy <cmalfroy@student.42.fr>"]
 

@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 fn main() {
-    let mut list = vec![1, 53, 26, 98, -1, 4 , 5, 1, 85, 1, 0, -65, 51];
+    let list = vec![1, 53, 26, 98, -1, 4 , 5, 1, 85, 1, 0, -65, 51];
 
     println!("The mean of list is: {:?}", mean(&list));
     println!("The mode of list is: {:?}", mode(&list));
