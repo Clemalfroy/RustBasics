@@ -1,1 +1,0 @@
-c:\Users\cleme\rust_lang\learn\communicator\target\debug\libcommunicator-fd7bf952e5cefdc7.rmeta: c:\Users\cleme\rust_lang\learn\communicator\src\client.rs c:\Users\cleme\rust_lang\learn\communicator\src\lib.rs c:\Users\cleme\rust_lang\learn\communicator\src\network\mod.rs c:\Users\cleme\rust_lang\learn\communicator\src\network\server.rs
