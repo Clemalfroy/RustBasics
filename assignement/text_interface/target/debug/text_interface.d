@@ -1,1 +1,1 @@
-/Users/cmalfroy/Rust/assignement/text_interface/target/debug/text_interface.dSYM: /Users/cmalfroy/Rust/assignement/text_interface/src/main.rs
+C:\Users\cleme\rust_lang\assignement\text_interface\target\debug\text_interface.pdb: C:\Users\cleme\rust_lang\assignement\text_interface\src\main.rs

@@ -1,16 +1,10 @@
 use std::collections::HashMap;
 use std::io;
 
-struct Query {
-    method: Method,
-    departement: String,
-    name: String,
-}
-
 enum Method {
-    Add,
-    Remove,
-    Get,
+    Get(String),
+    Add {name: String, departement: String},
+    Remove {name: String, departement: String},
 }
 
 fn user_input() -> String {
@@ -21,75 +15,70 @@ fn user_input() -> String {
             .expect("Failed to read from stdin");
         let len = input.len();
         input.truncate(len - 1);
-        
+
         input
 }
 
-fn build_query(input: &str) -> Option<Query> {
+fn build_query(input: &str) -> Option<Method> {
 
     let words =  input.split_whitespace().enumerate();
-
     let mut fields = HashMap::new();
 
     for (i, word) in words { fields.entry(i).or_insert(word); }
 
     let method = match fields.get(&0) {
-        Some(&"add") => Method::Add,
-        Some(&"remove") => Method::Remove,
-        Some(&"get") => Method::Get,
+        Some(&"add") => Method::Add {
+            name: match fields.get(&1){None => return None, Some(x) => x.to_string()},
+            departement: match fields.get(&3){None => return None, Some(x) => x.to_string()}
+        },
+        Some(&"remove") => Method::Remove {
+            name: match fields.get(&1){None => return None, Some(x) => x.to_string()},
+            departement: match fields.get(&3){None => return None, Some(x) => x.to_string()}
+         },
+        Some(&"get") => Method::Get(match fields.get(&1){None => return None, Some(x) => x.to_string()}),
         _ => return None,
     };
-    match method {
-        Method::Add | Method::Remove => {
-            match fields.get(&2) {
-                Some(&"to") => (),
-                _ => return None,
-            };
+
+    Some(method)
+
+}
+
+fn add_to_hash(hashmap: &mut HashMap<String, Vec<String>>, name: String, departement: String) {
+    if hashmap.contains_key(&departement) {
+        let list_of_names = hashmap.get_mut(&departement);
+        match list_of_names {
+            Some(vec) => { vec.push(name); },
+            None => (),
         }
-        _ => (),
+    } else {
+        hashmap.entry(departement).or_insert(vec![name]);
     }
-    let departement = match method {
-        Method::Add | Method::Remove => {
-            match fields.get(&3) {
-                Some(&x) => x,
-                _ => return None,
-            }
-        }
-        Method::Get => {
-            match fields.get(&1) {
-                Some(&x) => x,
-                _ => return None,
-            }
-        }
-    };
-    let name = match method {
-        Method::Add | Method::Remove => {
-            match fields.get(&1) {
-                Some(x) => x,
-                _ => return None,
-            }
-        }
-        Method::Get => "",
-    };
-    Some(Query { method, departement: departement.to_string(), name: name.to_string() })
+}
+
+fn remove_from_hash(hashmap: &mut HashMap<String, Vec<String>> ,name: String, departement: String) {
+    let list_of_names = hashmap.get_mut(&departement);
+    match list_of_names {
+        Some(vec) => { vec.retain(|x| x != &name)},
+        None => (),
+    }
 }
 
 fn main() {
-
+    
     let mut company = HashMap::new();
 
     loop {
-
         let input = user_input();
-        if input == "exit" { break; }
+
+        let query = build_query(&input);
+        if let None = query { continue; }
+        let query = query.unwrap();
         
-        let mut query = build_query(&input).unwrap();
-
-        match query.method {
-            Method::Add => { company.entry(query.departement).or_insert(query.name); },
-            Method::Get => { println!("get: {:?}:", company.get(&query.departement)); },
-            Method::Remove => { company.remove(&query.departement); },
+        match query {
+            Method::Get(x) => println!("{:?}", company.get(&x)),
+            Method::Add{name, departement} => add_to_hash(&mut company, name, departement),
+            Method::Remove{name, departement} => remove_from_hash(&mut company, name, departement),
         }
-    }
 
+    }
 }

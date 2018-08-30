@@ -1,1 +1,1 @@
-/Users/cmalfroy/rust/learn/vector/target/debug/libvector.rmeta: /Users/cmalfroy/rust/learn/vector/src/main.rs
+c:\Users\cleme\rust_lang\learn\vector\target\debug\libvector.rmeta: c:\Users\cleme\rust_lang\learn\vector\src\main.rs

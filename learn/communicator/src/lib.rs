@@ -8,6 +8,6 @@ mod tests {
     #[test]
     fn it_works() {
         client::connect();
-        64
+        64;
     }
 }

@@ -1,1 +1,1 @@
-/Users/cmalfroy/Rust/learn/string/target/debug/libstring.rmeta: /Users/cmalfroy/Rust/learn/string/src/main.rs
+c:\Users\cleme\rust_lang\learn\string\target\debug\libstring.rmeta: c:\Users\cleme\rust_lang\learn\string\src\main.rs
