@@ -58,7 +58,7 @@ fn add_to_hash(hashmap: &mut HashMap<String, Vec<String>>, name: String, departe
 fn remove_from_hash(hashmap: &mut HashMap<String, Vec<String>> ,name: String, departement: String) {
     let list_of_names = hashmap.get_mut(&departement);
     match list_of_names {
-        Some(vec) => { vec.retain(|x| x != &name)},
+        Some(vec) => { vec.retain(|x| x != &name) },
         None => (),
     }
 }
