@@ -26,20 +26,22 @@ fn build_query(input: &str) -> Option<Method> {
 
     for (i, word) in words { fields.entry(i).or_insert(word); }
 
-    let method = match fields.get(&0) {
-        Some(&"add") => Method::Add {
-            name: match fields.get(&1){None => return None, Some(x) => x.to_string()},
-            departement: match fields.get(&3){None => return None, Some(x) => x.to_string()}
+    match fields.get(&0) {
+        Some(&"get") => fields.get(&1).map(|x| Method::Get(x.to_string())),
+        Some(&"remove") => {
+            fields.get(&1).and_then(|x| fields.get(&3).map(|y| Method::Remove {
+                name: x.to_string(),
+                departement: y.to_string()
+                }))
         },
-        Some(&"remove") => Method::Remove {
-            name: match fields.get(&1){None => return None, Some(x) => x.to_string()},
-            departement: match fields.get(&3){None => return None, Some(x) => x.to_string()}
-         },
-        Some(&"get") => Method::Get(match fields.get(&1){None => return None, Some(x) => x.to_string()}),
-        _ => return None,
-    };
-
-    Some(method)
+        Some(&"add") => {
+            fields.get(&1).and_then(|x| fields.get(&3).map(|y| Method::Add {
+                name: x.to_string(),
+                departement: y.to_string()
+                }))
+        },
+        _ => None,
+    }
 
 }
 
@@ -69,6 +71,7 @@ fn main() {
 
     loop {
         let input = user_input();
+        if input == "exit" { break; }
 
         let query = build_query(&input);
         if let None = query { continue; }
