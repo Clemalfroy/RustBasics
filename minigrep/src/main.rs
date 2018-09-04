@@ -8,11 +8,11 @@ use minigrep::Config;
 
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let config = Config::new(&args).unwrap_or_else(|err| {
-            eprintln!("Problem parsing arguments: {}", err);
-            process::exit(1);
-        });
+    
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {}", err);
+        process::exit(1);
+    });
 
     println!("\nSearching for {}", config.query);
     println!("In file {}\n\n", config.filename);
