@@ -20,7 +20,7 @@ mod test {
             search(query, contents)
         );
     }
-    
+
     #[test]
     fn case_insensitive() {
         let query = "rUsT";
@@ -79,7 +79,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
     for line in contents.lines() {
         if line.contains(query) {
-            results.push(line);
+            results.push(line.trim());
         }
     }
     results
@@ -91,7 +91,7 @@ pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a st
 
     for line in contents.lines() {
         if line.to_lowercase().contains(&query) {
-            results.push(line);
+            results.push(line.trim());
         }
     }
     results
