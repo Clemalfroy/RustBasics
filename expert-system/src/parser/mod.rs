@@ -20,9 +20,15 @@ impl Parsing {
             let line = line.trim_left();
             match line.chars().next() {
                 Some('#') | None => continue,
-                Some('?') => unimplemented!(),
-                Some('=') => unimplemented!(),
-                _ => unimplemented!(),
+                Some('?') => {
+                    unimplemented!();
+                    },
+                Some('=') => {
+                    unimplemented!(); 
+                },
+                _ => { 
+                    unimplemented!();
+                },
             }
         }
         Some(Parsing{ queries, initial_facts, rules })
