@@ -1,0 +1,1 @@
+/Users/cmalfroy/Rust/expert-system/target/debug/libexpert_system.rmeta: /Users/cmalfroy/Rust/expert-system/src/lib.rs /Users/cmalfroy/Rust/expert-system/src/main.rs /Users/cmalfroy/Rust/expert-system/src/parser/mod.rs
