@@ -1,0 +1,11 @@
+/Users/cmalfroy/Rust/tgvmax_notifier/target/debug/deps/serde_urlencoded-f62b1264cdae7226.rmeta: /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/lib.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/de.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/mod.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/key.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/pair.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/part.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/value.rs
+
+/Users/cmalfroy/Rust/tgvmax_notifier/target/debug/deps/serde_urlencoded-f62b1264cdae7226.d: /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/lib.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/de.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/mod.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/key.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/pair.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/part.rs /Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/value.rs
+
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/lib.rs:
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/de.rs:
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/mod.rs:
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/key.rs:
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/pair.rs:
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/part.rs:
+/Users/cmalfroy/.cargo/registry/src/github.com-1ecc6299db9ec823/serde_urlencoded-0.5.3/src/ser/value.rs:

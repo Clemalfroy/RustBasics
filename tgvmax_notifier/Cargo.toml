@@ -1,0 +1,10 @@
+[package]
+name = "tgvmax_notifier"
+version = "0.1.0"
+authors = ["cmalfroy <cmalfroy@student.42.fr>"]
+
+[dependencies]
+
+clap = "2.32.0"
+reqwest = "0.8.8"
+serde_json = "1.0"

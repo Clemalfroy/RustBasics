@@ -1,1 +1,1 @@
-c:\Users\cleme\rust_lang\assignement\lyrics\target\debug\liblyrics.rmeta: c:\Users\cleme\rust_lang\assignement\lyrics\src\main.rs
+/Users/cmalfroy/Rust/assignement/lyrics/target/debug/liblyrics.rmeta: /Users/cmalfroy/Rust/assignement/lyrics/src/main.rs
