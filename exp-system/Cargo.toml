@@ -1,0 +1,6 @@
+[package]
+name = "exp-system"
+version = "0.1.0"
+authors = ["cmalfroy <cmalfroy@student.42.fr>"]
+
+[dependencies]

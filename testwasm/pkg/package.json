@@ -1,0 +1,16 @@
+{
+  "name": "testwasm",
+  "collaborators": [
+    "cmalfroy <cmalfroy@student.42.fr>"
+  ],
+  "description": null,
+  "version": "0.1.0",
+  "license": null,
+  "repository": null,
+  "files": [
+    "testwasm_bg.wasm",
+    "testwasm.d.ts"
+  ],
+  "main": "testwasm.js",
+  "types": "testwasm.d.ts"
+}
