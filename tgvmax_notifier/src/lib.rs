@@ -1,12 +1,14 @@
 extern crate clap;
 extern crate reqwest;
 extern crate serde_json;
+extern crate url;
 
 use std::error::Error;
 use std::io::Read;
 use serde_json::{Value};
 use std::env;
 use std::{thread, time::Duration};
+use url::percent_encoding::{utf8_percent_encode, DEFAULT_ENCODE_SET};
 
 pub struct TravelInfo {
     date: String,
@@ -18,8 +20,8 @@ impl TravelInfo {
     pub fn new(args: clap::ArgMatches) -> TravelInfo {
         TravelInfo {
             date: args.value_of("date").unwrap().to_string(),
-            dest: args.value_of("from").unwrap().to_string(),
-            from: args.value_of("to").unwrap().to_string(),
+            dest: args.value_of("to").unwrap().to_string(),
+            from: args.value_of("from").unwrap().to_string(),
         }
     }
 }
@@ -34,22 +36,24 @@ fn get_travels(url: &str) -> Result <serde_json::Value, Box<dyn Error>> {
     return Ok(v);
 }
 
-fn send_sms(message: String) -> Result<(), Box<dyn Error>> {
+fn send_sms(message: &str) -> Result<(), Box<dyn Error>> {
 
-    println!("Sending message:{}", message);
     let (username, pass) = match (env::var_os("SMS_USER"), env::var_os("SMS_PASS")) {
-        (Some(username), Some(pass)) => (username.to_os_string(), pass.to_os_string()),
-        _ => return Err(Box::from("Secret keys aren't set"))
+        (Some(username), Some(pass)) => (username.into_string().unwrap(), pass.into_string().unwrap()),
+        _ => return Err(Box::from("Secret keys aren't set."))
     };
 
     let url = format!(
-        "https://smsapi.free-mobile.fr/sendmsg?user={:?}&pass={:?}&msg={}",
+        "https://smsapi.free-mobile.fr/sendmsg?user={}&pass={}&msg={}",
         username,
         pass,
         message,
         );
-    print!("{:?} ", url);
+
     reqwest::get(&url)?;
+
+    println!("Sending message: {}", message);
+
     Ok(())
 }
 
@@ -61,6 +65,8 @@ pub fn run(info: TravelInfo) -> Result<(), Box<dyn Error>> {
     info.date, info.from, info.dest);
     println!("{}", url);
 
+    let mut last_message = String::new();
+
     loop {
         thread::sleep(Duration::new(30, 0));
         println!("I'm searching...");
@@ -69,10 +75,15 @@ pub fn run(info: TravelInfo) -> Result<(), Box<dyn Error>> {
             println!("No results, I'll try again in 30 seconds!");
             continue;
         }
-        send_sms("coucou".to_string())?;
-        // for travel in  travels["records"] {
-
-        // }
+        let mut message = String::new();
+        let travels = travels["records"].as_array().unwrap();
+        for travel in travels {
+            message.push_str(travel["fields"]["heure_depart"].as_str().unwrap());
+            message.push('\n');
+        }
+        let message: String = utf8_percent_encode(&message, DEFAULT_ENCODE_SET).collect();
+        if message == last_message { continue }
+        send_sms(&message)?;
+        last_message = message;
     }
-//https://smsapi.free-mobile.fr/sendmsg?user=37005560&pass=QWW7yiyhmzppSe&msg=Hello%20World%20! 
 }

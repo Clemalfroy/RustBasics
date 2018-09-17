@@ -1,1 +1,1 @@
-/Users/cmalfroy/Rust/assignement/generics/target/debug/libgenerics.rmeta: /Users/cmalfroy/Rust/assignement/generics/src/main.rs
+c:\Users\cleme\rust_lang\assignement\generics\target\debug\libgenerics.rmeta: c:\Users\cleme\rust_lang\assignement\generics\src\main.rs

@@ -1,1 +1,1 @@
-/Users/cmalfroy/Rust/tgvmax_notifier/target/debug/libtgvmax_notifier.rlib: /Users/cmalfroy/Rust/tgvmax_notifier/src/lib.rs
+C:\Users\cleme\rust_lang\tgvmax_notifier\target\debug\libtgvmax_notifier.rlib: C:\Users\cleme\rust_lang\tgvmax_notifier\src\lib.rs

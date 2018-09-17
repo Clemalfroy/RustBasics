@@ -1,1 +1,1 @@
-/Users/cmalfroy/Rust/assignement/area/target/debug/libarea.rmeta: /Users/cmalfroy/Rust/assignement/area/src/main.rs
+c:\Users\cleme\rust_lang\assignement\area\target\debug\libarea.rmeta: c:\Users\cleme\rust_lang\assignement\area\src\main.rs

@@ -1,0 +1,11 @@
+C:\Users\cleme\rust_lang\tgvmax_notifier\target\debug\deps\libserde_urlencoded-ca485e797edafbfd.rlib: C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\lib.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\de.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\mod.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\key.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\pair.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\part.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\value.rs
+
+C:\Users\cleme\rust_lang\tgvmax_notifier\target\debug\deps\serde_urlencoded-ca485e797edafbfd.d: C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\lib.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\de.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\mod.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\key.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\pair.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\part.rs C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\value.rs
+
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\lib.rs:
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\de.rs:
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\mod.rs:
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\key.rs:
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\pair.rs:
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\part.rs:
+C:\Users\cleme\.cargo\registry\src\github.com-1ecc6299db9ec823\serde_urlencoded-0.5.3\src\ser\value.rs:

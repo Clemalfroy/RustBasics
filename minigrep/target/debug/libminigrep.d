@@ -1,1 +1,1 @@
-/Users/cmalfroy/Rust/minigrep/target/debug/libminigrep.rmeta: /Users/cmalfroy/Rust/minigrep/src/lib.rs /Users/cmalfroy/Rust/minigrep/src/main.rs
+c:\Users\cleme\rust_lang\minigrep\target\debug\libminigrep.rmeta: c:\Users\cleme\rust_lang\minigrep\src\lib.rs c:\Users\cleme\rust_lang\minigrep\src\main.rs
