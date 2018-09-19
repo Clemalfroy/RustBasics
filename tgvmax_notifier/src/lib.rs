@@ -57,6 +57,17 @@ fn send_sms(message: &str) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+fn create_message(travels: serde_json::Value) -> String {
+    let mut message = String::new();
+    let travels = travels["records"].as_array().unwrap();
+    for travel in travels {
+        message.push_str(travel["fields"]["heure_depart"].as_str().unwrap());
+        message.push('\n');
+    }
+    let message: String = utf8_percent_encode(&message, DEFAULT_ENCODE_SET).collect();
+    message
+}
+
 pub fn run(info: TravelInfo) -> Result<(), Box<dyn Error>> {
     
     let url = format!("https://ressources.data.sncf.com/api/records/1.0/search/\
@@ -75,13 +86,7 @@ pub fn run(info: TravelInfo) -> Result<(), Box<dyn Error>> {
             println!("No results, I'll try again in 30 seconds!");
             continue;
         }
-        let mut message = String::new();
-        let travels = travels["records"].as_array().unwrap();
-        for travel in travels {
-            message.push_str(travel["fields"]["heure_depart"].as_str().unwrap());
-            message.push('\n');
-        }
-        let message: String = utf8_percent_encode(&message, DEFAULT_ENCODE_SET).collect();
+        let message = create_message(travels);
         if message == last_message { continue }
         send_sms(&message)?;
         last_message = message;
