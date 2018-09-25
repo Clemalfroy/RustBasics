@@ -18,10 +18,8 @@ fn play_sound(device: &rodio::Device, file: std::fs::File) {
 
 fn main() {
 
-    let start = PreciseTime::now();
     let device = rodio::default_output_device().unwrap();
     let file = std::fs::File::open("src/music.wav").unwrap();
 
-    println!("{:?}", start);
     play_sound(&device, file);
 }
