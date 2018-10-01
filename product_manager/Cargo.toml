@@ -1,0 +1,7 @@
+[package]
+name = "product_manager"
+version = "0.1.0"
+authors = ["cmalfroy <cmalfroy@student.42.fr>"]
+
+[dependencies]
+uuid = "0.7"
