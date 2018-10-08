@@ -27,7 +27,7 @@ fn read() -> Json<Value> {
 }
 
 #[put("/<id>", data = "<product>")]
-fn update(id: i32, product: Json<Product>) -> Json<Product> {
+fn update(id: String, product: Json<Product>) -> Json<Product> {
     product
 }
 
